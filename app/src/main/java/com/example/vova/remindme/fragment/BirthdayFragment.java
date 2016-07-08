@@ -13,16 +13,12 @@ import com.example.vova.remindme.R;
 /**
  * Created by vova on 08/07/2016.
  */
-public class ExampleFragment extends Fragment {
-    private View view;
-    private String title;
-    private Context context;
+public class BirthdayFragment extends AbstractTabFragment {
 
-    public static ExampleFragment getInstance(Context ctx){
+    public static BirthdayFragment getInstance(Context ctx){
         Bundle args = new Bundle();
-        ExampleFragment fragment = new ExampleFragment();
-        fragment.setContext(ctx);
-        fragment.setTitle("ExampleFragment");
+        BirthdayFragment fragment = new BirthdayFragment();
+        fragment.setTitle(ctx.getString(R.string.tab_birthdays));
         fragment.setArguments(args);
         return fragment;
     }
@@ -30,15 +26,8 @@ public class ExampleFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_example, container, false);
+        View view = inflater.inflate(R.layout.fragment_birthday, container, false);
         return view;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
-    }
 }
