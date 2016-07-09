@@ -19,6 +19,7 @@ public class TodoFragment extends AbstractTabFragment {
         Bundle args = new Bundle();
         TodoFragment fragment = new TodoFragment();
         fragment.setTitle(ctx.getString(R.string.tab_todo));
+        fragment.setContext(ctx);
         fragment.setArguments(args);
         return fragment;
     }

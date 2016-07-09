@@ -19,6 +19,7 @@ public class IdeasFragment extends AbstractTabFragment {
         Bundle args = new Bundle();
         IdeasFragment fragment = new IdeasFragment();
         fragment.setTitle(ctx.getString(R.string.tab_ideas));
+        fragment.setContext(ctx);
         fragment.setArguments(args);
         return fragment;
     }

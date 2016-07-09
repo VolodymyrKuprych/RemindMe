@@ -19,6 +19,7 @@ public class BirthdayFragment extends AbstractTabFragment {
         Bundle args = new Bundle();
         BirthdayFragment fragment = new BirthdayFragment();
         fragment.setTitle(ctx.getString(R.string.tab_birthdays));
+        fragment.setContext(ctx);
         fragment.setArguments(args);
         return fragment;
     }
